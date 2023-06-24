@@ -39,6 +39,11 @@ class CityRepository{
                     id:city_id
                 }
             });
+            /*
+            const city = await City.findByPk(city_id);
+            city.name = data.name;
+            await city.save();*/
+            
             return city;
         }catch(error){
             console.log("Something went wrong in repository layer3");
