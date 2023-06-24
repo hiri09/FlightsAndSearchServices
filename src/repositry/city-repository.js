@@ -4,14 +4,12 @@ class CityRepository{
    
     async createCity({name}){
         try{
-            
             const city = await City.create({
                 name : name
-            });
-
+            })
             return city;
         }catch(error){
-            console.log("Something went wrong in repository layer");
+            console.log("Something went wrong in repository layer1");
             throw {error};
         }
     }
@@ -28,7 +26,7 @@ class CityRepository{
             return true;
 
         }catch(error){
-            console.log("Something went wrong in repository layer");
+            console.log("Something went wrong in repository layer2");
             throw {error};
         }
     }
@@ -43,7 +41,7 @@ class CityRepository{
             });
             return city;
         }catch(error){
-            console.log("Something went wrong in repository layer");
+            console.log("Something went wrong in repository layer3");
             throw {error};
         }
     }
@@ -55,7 +53,7 @@ class CityRepository{
             return city;
 
         }catch(error){
-            console.log("Something went wrong in repository layer");
+            console.log("Something went wrong in repository layer4");
             throw {error};
         }
     }
