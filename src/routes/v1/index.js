@@ -1,7 +1,7 @@
 const  express = require('express');
 
 const CityController = require('../../controllers/city-controllers');
-const FlightController = require('../../controllers/flight-controllers');
+const FlightController = require('../../controllers/flight-controller');
 const router = express.Router();
 
 router.post('/city' , CityController.create);

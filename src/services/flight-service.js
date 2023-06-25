@@ -1,37 +1,30 @@
-const {FlightRepository, AirplaneRepository} = require('../repositry/index');
+const {FlightRepository , AirplaneRepository } = require('../repositry/index');
 
 class FlightService {
 
-    constructor() {
-        this.airplaneRespository = new AirplaneRepository();
-        this.flightrespository = new FlightRepository();
+    constructor(){
+        this.airplaneRepository = new AirplaneRepository();
+        this.flightRepository = new FlightRepository();
     }
 
-    async createFlight(data) {
+    async createFlight(data){
+
         try {
-            
-            const airplane = await this.airplaneRespository.getAirplane(data.airplaneId);
-            const flight = await this.flightrespository.createFlight({
-                ...data, totalSeats:airplane.capacity 
-            });
-            console.log("not",flight);
+            const airplane = await this.airplaneRepository.getAirplanes(data.airplaneId);
+            const flight = await this.flightRepository.createFlight({...data , tottalSeats : airplane.capacity});
             return flight;
         } catch (error) {
-            console.log("Something went wrong at service layer ram");
+            console.log("Something went wrong in service layer ok" , data);
             throw {error};
         }
     }
-
-    
-    
-    
 }
 
 module.exports = FlightService;
 
-/**
- * {
- *   flightNumber,
+
+/*
+flightNumber,
  *  airplaneId ,
  *   departureAirportId,
  *   arrivalAirportId,
@@ -39,5 +32,4 @@ module.exports = FlightService;
  *   departureTime,
  *   price
  *   totalSeats -> airplane
- * }
  */

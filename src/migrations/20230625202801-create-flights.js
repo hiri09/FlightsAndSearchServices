@@ -26,7 +26,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull:false,
       },
-      arrivaleTime: {
+      arrivalTime: {
         type: Sequelize.DATE,
         allowNull:false,
       },
@@ -41,7 +41,7 @@ module.exports = {
       boardingGate: {
         type: Sequelize.STRING
       },
-      totalSeats: {
+      tottalSeats: {
         type: Sequelize.INTEGER,
         allowNull:false,
       },
