@@ -13,4 +13,8 @@
 
 ## city : id , name , created_at , updated_at
 ## Airpot : id , address , created_at , updated_at , name , city_id
-   ## Relationship : city can have multiple aiport but single ariport belongs to single city (one to many)
+   - npx sequelize model:generate --name Airport --attributes name:string,address:string,cityId:integer
+   ## Relationship : city can have multiple aiport but single ariport belongs to single city (one to many) 
+     
+
+
