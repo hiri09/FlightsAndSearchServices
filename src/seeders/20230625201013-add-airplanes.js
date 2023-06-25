@@ -15,36 +15,36 @@ module.exports = {
 
     await queryInterface.bulkInsert('Airplanes', [
       {
-        modelNumber: 'Airbus A380',
-        capacity: 300,
+        modelNumber : 'Overnight Skies',
+        capacity : 300,
         createdAt: new Date(),
         updatedAt:new Date()
       },
       {
-        modelNumber: 'Lockheed Vega 5B',
-        capacity: 350,
+        modelNumber : 'Aeroflow America',
+        capacity : 350,
         createdAt: new Date(),
         updatedAt:new Date()
       },
       {
-        modelNumber: 'Cessna Citation Excel',
-        capacity: 400,
+        modelNumber : 'Republic Airlines',
+        capacity : 400,
         createdAt: new Date(),
         updatedAt:new Date()
       },
       {
-        modelNumber: 'Boeing 747',
-        capacity: 320,
+        modelNumber : 'Blue Line Club',
+        capacity : 320,
         createdAt: new Date(),
         updatedAt:new Date()
       },
       {
-        modelNumber: 'Space Ship Two',
-        capacity: 150,
+        modelNumber : 'Overnight Skies',
+        capacity : 150,
         createdAt: new Date(),
         updatedAt:new Date()
+        
       },
-      
     ], {});
   },
 
