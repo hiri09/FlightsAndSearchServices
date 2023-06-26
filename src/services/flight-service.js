@@ -1,5 +1,5 @@
 const {FlightRepository , AirplaneRepository } = require('../repositry/index');
-
+const {compareTime} = require('../utils/helper');
 class FlightService {
 
     constructor(){
@@ -10,11 +10,14 @@ class FlightService {
     async createFlight(data){
 
         try {
+            if(!compareTime(data.arrivalTime , data.departureTime)){
+                throw {error : "Arrival time cannot be less than the departure time"};
+            }
             const airplane = await this.airplaneRepository.getAirplanes(data.airplaneId);
             const flight = await this.flightRepository.createFlight({...data , tottalSeats : airplane.capacity});
             return flight;
         } catch (error) {
-            console.log("Something went wrong in service layer ok" , data);
+            console.log("Something went wrong in service layer");
             throw {error};
         }
     }

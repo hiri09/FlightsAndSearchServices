@@ -10,7 +10,7 @@ class  FlightRepository{
             return flight;
 
         }catch(error){
-            console.log("Something went wrong in repository layer13" , data);
+            console.log("Something went wrong in repository layer");
             throw {error};
         }
     }

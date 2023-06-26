@@ -6,7 +6,6 @@ class AirplaneRepository{
         try{
             
             const airplanes = await Airplane.findByPk(id);
-            console.log(airplanes);
             return airplanes;
 
         }catch(error){
