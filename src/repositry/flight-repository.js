@@ -55,6 +55,8 @@ class  FlightRepository{
             console.log("Something went wrong in repository layer");
             throw {error};
         }
+
+        
     }
 
     async getAllFlights(filter){
