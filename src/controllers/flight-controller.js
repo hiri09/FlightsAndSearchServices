@@ -75,7 +75,7 @@ const get = async (req, res) => {
 
 const update = async (req, res) => {
     try {
-        const response = await flightService.updateFlight(req.params.id, req.body);
+        const response = await flightService.updateFlight(req.params.id , req.body);
         return res.status(SuccessCodes.OK).json({
             data: response,
             success: true,
@@ -87,7 +87,7 @@ const update = async (req, res) => {
         return res.status(500).json({
             data: {},
             success: false,
-            message: 'Not able to update the flight',
+            message: 'Not able to updated the flight',
             err: error
         });
     }
