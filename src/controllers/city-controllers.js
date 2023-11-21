@@ -10,7 +10,8 @@ const cityService = new CityService();
 
 const create = async(req , res) => {
     try{
-        
+        const data = req.body.name;
+        console.log("log at contoller" , data);
         const city = await cityService.createCity(req.body);
         return res.status(201).json({
             data:city,

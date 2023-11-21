@@ -8,7 +8,7 @@ class CityService{
 
     async createCity(data){
         try{
-
+            console.log("log at service layer" , data);
             const city = await this.cityRepository.createCity(data);
             return city;
 
